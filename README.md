@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 勤怠打刻・残業可視化システム (Time-Tracker)
 
-## Getting Started
+## 概要
+Excelによる非効率な勤怠管理から脱却し、社員自身がリアルタイムで労働時間を把握できるようにするためのWebアプリケーションです。
 
-First, run the development server:
+## 制作の背景と解決したい課題
+これまでExcelで行っていた勤怠管理では、以下の課題がありました。
+1. 月末に集計するまで、社員も管理者も「誰がどれくらい残業しているか」が見えない。入力者のミスで時間計画が狂うことがある。
+2. その結果、無意識のうちに残業時間が増大してしまう。月末になって大きな修正をしなくてはならなくなる。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+本アプリは、日々の打刻をシステム化し、労働時間をダッシュボードで「可視化」することで、社員のワークライフバランス向上と残業コストの削減（意識改革）を促すことを目的としています。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 使用技術（技術スタック）
+- **フロントエンド:** Next.js (App Router), React, TypeScript
+- **スタイリング:** Tailwind CSS
+- **データベース・認証:** Supabase
+- **インフラ・デプロイ:** Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 実装予定の機能（MVP）
+-  ユーザー登録・ログイン機能
+-  出勤・退勤のリアルタイム打刻機能
+-  当月の総労働時間・残業時間の計算とグラフ表示（ダッシュボード）
+-  （第2フェーズ）シフト管理・有給休暇申請機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
